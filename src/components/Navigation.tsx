@@ -9,8 +9,7 @@ const navItems = [
   { label: "About", target: "/about", type: "route" as const },
   { label: "Products", target: "/products", type: "route" as const },
   { label: "Quality", target: "/quality", type: "route" as const },
-  { label: "Customers", target: "#customers", type: "section" as const },
-  { label: "Careers", target: "#careers", type: "section" as const },
+  { label: "Careers", target: "/careers", type: "route" as const },
   { label: "Contact", target: "/contact", type: "route" as const },
 ];
 
