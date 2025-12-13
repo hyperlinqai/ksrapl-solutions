@@ -1,0 +1,111 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Light theme for body sections */
+    --background: 210 20% 98%;
+    --foreground: 222 47% 11%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
+
+    --primary: 217 91% 45%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 38 95% 54%;
+    --secondary-foreground: 222 84% 4%;
+
+    --muted: 210 20% 94%;
+    --muted-foreground: 215 16% 47%;
+
+    --accent: 217 91% 95%;
+    --accent-foreground: 217 91% 45%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 217 91% 45%;
+
+    --radius: 0.5rem;
+
+    /* Dark theme tokens for header/footer */
+    --nav-bg: 222 84% 4%;
+    --nav-foreground: 220 14% 98%;
+    --footer-bg: 222 47% 8%;
+    
+    /* Industrial-specific tokens */
+    --glass-bg: 222 84% 4% / 0.95;
+    --glass-border: 217 91% 60% / 0.2;
+    --hero-overlay: 222 84% 2% / 0.7;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(217 91% 45% / 0.05), hsl(38 95% 54% / 0.05));
+    --gradient-glass: linear-gradient(135deg, hsl(222 84% 4% / 0.95), hsl(222 84% 4% / 0.85));
+
+    /* Effects */
+    --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.15);
+    --shadow-strong: 0 10px 40px hsl(222 84% 2% / 0.1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground overflow-x-hidden;
+    font-family: 'Inter', sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    background: var(--gradient-glass);
+    backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid hsl(var(--glass-border));
+  }
+
+  .dark-section {
+    background: hsl(var(--footer-bg));
+    color: hsl(var(--nav-foreground));
+  }
+
+  .text-gradient {
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .hover-lift {
+    transition: var(--transition-smooth);
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-glow);
+  }
+}
