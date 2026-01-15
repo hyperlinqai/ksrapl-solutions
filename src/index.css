@@ -18,24 +18,24 @@ All colors MUST be HSL.
     --popover: 0 0% 100%;
     --popover-foreground: 222 47% 11%;
 
-    --primary: 217 91% 45%;
+    --primary: 359 79% 56%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 38 95% 54%;
+    --secondary: 0 0% 100%;
     --secondary-foreground: 222 84% 4%;
 
     --muted: 210 20% 94%;
     --muted-foreground: 215 16% 47%;
 
-    --accent: 217 91% 95%;
-    --accent-foreground: 217 91% 45%;
+    --accent: 359 79% 96%;
+    --accent-foreground: 359 79% 56%;
 
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
     --border: 214 32% 91%;
     --input: 214 32% 91%;
-    --ring: 217 91% 45%;
+    --ring: 359 79% 56%;
 
     --radius: 0.5rem;
 
@@ -43,19 +43,19 @@ All colors MUST be HSL.
     --nav-bg: 222 84% 4%;
     --nav-foreground: 220 14% 98%;
     --footer-bg: 222 47% 8%;
-    
+
     /* Industrial-specific tokens */
     --glass-bg: 222 84% 4% / 0.95;
     --glass-border: 217 91% 60% / 0.2;
     --hero-overlay: 222 84% 2% / 0.7;
-    
+
     /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(217 91% 45% / 0.05), hsl(38 95% 54% / 0.05));
+    --gradient-hero: linear-gradient(135deg, hsl(359 79% 56% / 0.1), hsl(222 47% 11% / 0.1));
     --gradient-glass: linear-gradient(135deg, hsl(222 84% 4% / 0.95), hsl(222 84% 4% / 0.85));
 
     /* Effects */
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-    --shadow-glow: 0 0 40px hsl(217 91% 60% / 0.15);
+    --shadow-glow: 0 0 40px hsl(359 79% 56% / 0.25);
     --shadow-strong: 0 10px 40px hsl(222 84% 2% / 0.1);
   }
 }
@@ -74,7 +74,12 @@ All colors MUST be HSL.
     scroll-behavior: smooth;
   }
 
-  h1, h2, h3, h4, h5, h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     font-family: 'Inter', sans-serif;
     font-weight: 700;
     letter-spacing: -0.02em;
@@ -94,7 +99,7 @@ All colors MUST be HSL.
   }
 
   .text-gradient {
-    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--secondary)));
+    background: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--foreground)));
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -103,7 +108,7 @@ All colors MUST be HSL.
   .hover-lift {
     transition: var(--transition-smooth);
   }
-  
+
   .hover-lift:hover {
     transform: translateY(-2px);
     box-shadow: var(--shadow-glow);

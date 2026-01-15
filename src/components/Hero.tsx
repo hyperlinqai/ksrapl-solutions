@@ -59,14 +59,14 @@ export const Hero = () => {
       </AnimatePresence>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 h-full flex items-center">
+      <div className="relative z-10 container mx-auto px-6 h-full flex items-center pt-20">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            <p className="text-secondary font-semibold text-sm uppercase tracking-wider mb-4">
+            <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">
               Precision Tubular & Fabrication Solutions
             </p>
             <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
@@ -138,9 +138,8 @@ export const Hero = () => {
           <button
             key={index}
             onClick={() => setCurrentSlide(index)}
-            className={`w-2 h-2 rounded-full transition-all ${
-              currentSlide === index ? "bg-primary w-8" : "bg-muted"
-            }`}
+            className={`w-2 h-2 rounded-full transition-all ${currentSlide === index ? "bg-primary w-8" : "bg-muted"
+              }`}
           />
         ))}
       </div>

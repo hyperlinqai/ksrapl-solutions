@@ -137,7 +137,7 @@ const Products = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="pt-24 md:pt-28 pb-16 px-6">
+      <main className="pt-32 md:pt-36 pb-16 px-6">
         <section className="container mx-auto max-w-6xl mb-12">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

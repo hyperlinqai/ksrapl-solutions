@@ -54,9 +54,8 @@ export const Navigation = () => {
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 dark-section ${
-        scrolled ? "shadow-lg" : ""
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 dark-section ${scrolled ? "shadow-lg" : ""
+        }`}
     >
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
@@ -66,12 +65,12 @@ export const Navigation = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 0.2 }}
             className="cursor-pointer"
-            onClick={() => scrollToSection("#home")}
+            onClick={() => handleNavClick("#home", "section")}
           >
-            <img 
-              src={logo} 
-              alt="KSRAPL - Do. Win. Grow." 
-              className="h-12 w-auto"
+            <img
+              src={logo}
+              alt="KSRAPL - Do. Win. Grow."
+              className="h-[3.6rem] w-auto"
             />
           </motion.div>
 

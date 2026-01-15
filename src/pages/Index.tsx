@@ -2,9 +2,9 @@ import { Navigation } from "@/components/Navigation";
 import { Hero } from "@/components/Hero";
 import { VisionSection } from "@/components/VisionSection";
 import { AboutSection } from "@/components/AboutSection";
+import { VideoSection } from "@/components/VideoSection";
 import { CapabilitiesSection } from "@/components/CapabilitiesSection";
 import { ProductsSection } from "@/components/ProductsSection";
-import { PromotersSection } from "@/components/PromotersSection";
 import { StatsSection } from "@/components/StatsSection";
 import { GlobalPresenceSection } from "@/components/GlobalPresenceSection";
 import { ClientsSection } from "@/components/ClientsSection";
@@ -18,9 +18,9 @@ const Index = () => {
       <Hero />
       <VisionSection />
       <AboutSection />
+      <VideoSection />
       <CapabilitiesSection />
-      <ProductsSection />
-      <PromotersSection />
+      <ProductsSection limit={3} />
       <StatsSection />
       <GlobalPresenceSection />
       <ClientsSection />

@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { FooterCTA } from "@/components/FooterCTA";
+import { GlobalPresenceSection } from "@/components/GlobalPresenceSection";
 
 const pillars = [
   {
@@ -46,11 +47,14 @@ const leadership = [
   },
 ];
 
+import { VisionSection } from "@/components/VisionSection";
+import { PromotersSection } from "@/components/PromotersSection";
+
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="pt-24 md:pt-28">
+      <main className="pt-32 md:pt-36">
         {/* Hero */}
         <section className="px-6 pb-12">
           <div className="container mx-auto max-w-6xl grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
@@ -65,7 +69,7 @@ const About = () => {
                 We build diesel and hydraulic tanks, tubular assemblies, and fabricated components with the discipline of an automotive-grade supplier—so your production lines stay predictable.
               </p>
               <div className="flex flex-wrap gap-3">
-                <span className="px-4 py-2 rounded-full bg-secondary/15 text-secondary text-sm font-semibold">
+                <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
                   JIT & DOL ready
                 </span>
                 <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
@@ -88,13 +92,16 @@ const About = () => {
                   key={item.label}
                   className="rounded-2xl border border-border/80 bg-card p-5 shadow-sm"
                 >
-                  <div className="text-3xl font-bold text-secondary mb-1">{item.value}</div>
+                  <div className="text-3xl font-bold text-primary mb-1">{item.value}</div>
                   <div className="text-sm text-muted-foreground">{item.label}</div>
                 </div>
               ))}
             </div>
           </div>
         </section>
+
+        {/* Vision, Mission & Values */}
+        <VisionSection />
 
         {/* Pillars */}
         <section className="px-6 py-12 bg-muted/40">
@@ -164,6 +171,12 @@ const About = () => {
             </div>
           </div>
         </section>
+
+        {/* Promoters */}
+        <PromotersSection />
+
+        {/* Global Presence */}
+        <GlobalPresenceSection />
 
         {/* Call to action */}
         <section className="px-6 py-12">

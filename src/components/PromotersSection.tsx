@@ -6,6 +6,7 @@ const promoters = [
   {
     name: "Suresh Rao",
     role: "Director",
+    image: "/team/Suresh Rao.jpeg",
     bio: "With over 20 years of experience in manufacturing, Suresh brings deep expertise in quality management systems and best manufacturing practices.",
     highlights: [
       "Inclusive, customer-focused leadership",
@@ -16,6 +17,7 @@ const promoters = [
   {
     name: "Dhruv Aggarwal",
     role: "Director",
+    image: "/team/Dhruv aggarwal.jpeg",
     bio: "Dhruv focuses on building scalable, robust systems and tools that support long-term OEM partnerships.",
     highlights: [
       "Strong grounding in robust systems and tools",
@@ -55,17 +57,24 @@ export const PromotersSection = () => {
             >
               <Card className="h-full bg-card border-border hover:shadow-lg transition-shadow duration-300">
                 <CardContent className="p-8">
-                  <div className="mb-6">
+                  <div className="mb-6 flex flex-col items-center text-center">
+                    <div className="w-40 h-40 mb-4 rounded-full overflow-hidden border-4 border-primary/10">
+                      <img
+                        src={promoter.image}
+                        alt={promoter.name}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
                     <h3 className="text-2xl font-bold text-foreground mb-1">
                       {promoter.name}
                     </h3>
                     <p className="text-primary font-medium">{promoter.role}</p>
                   </div>
-                  
+
                   <p className="text-muted-foreground leading-relaxed mb-6">
                     {promoter.bio}
                   </p>
-                  
+
                   <div className="space-y-3">
                     {promoter.highlights.map((highlight, idx) => (
                       <div key={idx} className="flex items-start gap-3">

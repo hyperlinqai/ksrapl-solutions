@@ -19,7 +19,7 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      <main className="pt-24 md:pt-28 px-6 pb-16">
+      <main className="pt-32 md:pt-36 px-6 pb-16">
         <section className="container mx-auto max-w-5xl">
           <motion.div
             initial={{ opacity: 0, y: 20 }}

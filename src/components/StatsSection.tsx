@@ -7,9 +7,10 @@ import { Users, BriefcaseBusiness, Factory, CheckCircle2 } from "lucide-react";
 interface CounterProps {
   value: number;
   label: string;
+  suffix?: string;
 }
 
-const Counter = ({ value, label }: CounterProps) => {
+const Counter = ({ value, label, suffix = "" }: CounterProps) => {
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-100px" });
   const count = useMotionValue(0);
@@ -31,8 +32,9 @@ const Counter = ({ value, label }: CounterProps) => {
       transition={{ duration: 0.5 }}
       className="text-center"
     >
-      <motion.div className="text-5xl md:text-6xl font-bold text-secondary mb-3">
-        {rounded}
+      <motion.div className="text-5xl md:text-6xl font-bold text-primary mb-3 flex justify-center items-center">
+        <motion.span>{rounded}</motion.span>
+        {suffix && <span>{suffix}</span>}
       </motion.div>
       <div className="text-lg text-white/70 font-medium">{label}</div>
     </motion.div>
@@ -40,9 +42,8 @@ const Counter = ({ value, label }: CounterProps) => {
 };
 
 const stats = [
-  { label: "Total Staff", value: 50, icon: Users },
-  { label: "Total Projects", value: 200, icon: BriefcaseBusiness },
-  { label: "Total Customers", value: 11, icon: Factory },
+  { label: "Total Staff", value: 100, icon: Users, suffix: "+" },
+  { label: "Total Projects", value: 2000, icon: BriefcaseBusiness },
   { label: "Completed Projects", value: 125, icon: CheckCircle2 },
 ];
 
@@ -70,7 +71,7 @@ export const StatsSection = () => {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
           {stats.map((stat, index) => {
             const Icon = stat.icon;
             return (
@@ -86,7 +87,7 @@ export const StatsSection = () => {
                     {stat.label}
                   </span>
                 </div>
-                <Counter value={stat.value} label="" />
+                <Counter value={stat.value} label="" suffix={stat.suffix} />
               </div>
             );
           })}
