@@ -12,7 +12,7 @@ const testimonials = [
   {
     name: "John Doe",
     role: "Operations Head, OEM Client",
-    quote: "KSRAPL has helped our plants run more smoothly with consistent quality and on-time tubular assemblies.",
+    quote: "Nuvoautotech has helped our plants run more smoothly with consistent quality and on-time tubular assemblies.",
     initials: "JD",
   },
   {

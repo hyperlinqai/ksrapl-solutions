@@ -60,7 +60,7 @@ const About = () => {
           <div className="container mx-auto max-w-6xl grid lg:grid-cols-[1.1fr_0.9fr] gap-12 items-center">
             <div className="space-y-6">
               <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
-                About KSRAPL
+                About Nuvoautotech
               </div>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight text-foreground">
                 Precision tubular & fabrication partners for OEMs who cannot compromise on uptime.

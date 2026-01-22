@@ -44,7 +44,7 @@ const Quality = () => {
             </h1>
 
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed relative z-10">
-              KSRAPL practices the highest level of quality assurance, driving precise outcomes through training, error-proofing, and disciplined processes.
+              Nuvoautotech practices the highest level of quality assurance, driving precise outcomes through training, error-proofing, and disciplined processes.
             </p>
 
             <div className="flex justify-center gap-4 relative z-10 pt-4">

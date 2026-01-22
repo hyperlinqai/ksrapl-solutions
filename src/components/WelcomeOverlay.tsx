@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, ShieldCheck } from "lucide-react";
-import logo from "../assets/logo.png";
+import logo from "../assets/nuvo-logo.png";
 
 export const WelcomeOverlay = () => {
     // Default to true for development/verification so it always shows
@@ -42,7 +42,7 @@ export const WelcomeOverlay = () => {
                         animate={{ scale: 1, opacity: 1 }}
                         exit={{ scale: 0.9, opacity: 0 }}
                         // Card container
-                        className="bg-background rounded-3xl shadow-2xl border border-border p-8 md:p-12 max-w-2xl w-full text-center relative overflow-hidden"
+                        className="bg-black text-white rounded-3xl shadow-2xl border border-white/10 p-8 md:p-12 max-w-2xl w-full text-center relative overflow-hidden"
                     >
                         {/* Decorative glows inside card */}
                         <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
@@ -54,11 +54,11 @@ export const WelcomeOverlay = () => {
                             transition={{ delay: 0.2, duration: 0.6 }}
                             className="relative z-10"
                         >
-                            <img src={logo} alt="KSRAPL Logo" className="h-20 mx-auto mb-6" />
-                            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-2">
-                                Welcome to KSRAPL
+                            <img src={logo} alt="Nuvoautotech Logo" className="h-36 mx-auto mb-6" />
+                            <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
+                                Welcome to Nuvoautotech
                             </h1>
-                            <p className="text-lg text-muted-foreground mb-6">
+                            <p className="text-lg text-white/80 mb-6">
                                 Precision Tubular & Fabrication Solutions
                             </p>
                         </motion.div>
@@ -67,15 +67,15 @@ export const WelcomeOverlay = () => {
                             initial={{ opacity: 0 }}
                             animate={{ opacity: 1 }}
                             transition={{ delay: 0.4, duration: 0.6 }}
-                            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 text-muted-foreground relative z-10"
+                            className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8 text-white/80 relative z-10"
                         >
-                            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-border">
+                            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
                                 <Star className="w-4 h-4 text-primary fill-primary" />
-                                <span className="font-medium text-sm text-foreground">20+ Years Excellence</span>
+                                <span className="font-medium text-sm text-white">20+ Years Excellence</span>
                             </div>
-                            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-muted/50 border border-border">
+                            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
                                 <ShieldCheck className="w-4 h-4 text-primary" />
-                                <span className="font-medium text-sm text-foreground">Trusted OEM Supplier</span>
+                                <span className="font-medium text-sm text-white">Trusted OEM Supplier</span>
                             </div>
                         </motion.div>
 

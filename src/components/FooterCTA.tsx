@@ -44,7 +44,7 @@ export const FooterCTA = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-6">
             <div className="text-center md:text-left">
               <p className="text-sm text-white/60">
-                KSRAPL © 2021 – All Rights Reserved
+                Nuvoautotech © 2021 – All Rights Reserved
               </p>
             </div>
 

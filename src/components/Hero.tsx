@@ -74,7 +74,7 @@ export const Hero = () => {
               <span className="text-gradient">OEMs Worldwide</span>
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              KSRAPL delivers high-precision tubular assemblies, diesel and hydraulic tanks,
+              Nuvoautotech delivers high-precision tubular assemblies, diesel and hydraulic tanks,
               and fabricated components that power tractors, earthmovers, pumps, and industrial
               applications.
             </p>

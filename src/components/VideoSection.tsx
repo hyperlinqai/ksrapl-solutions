@@ -15,7 +15,7 @@ export const VideoSection = () => {
                         Company Presentation
                     </div>
                     <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
-                        See KSRAPL in Action
+                        See Nuvoautotech in Action
                     </h2>
                     <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
                         A glimpse into our world-class manufacturing facility and the team that drives our success.

@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/nuvo-logo.png";
 
 const navItems = [
   { label: "Home", target: "#home", type: "section" as const },
@@ -69,8 +69,8 @@ export const Navigation = () => {
           >
             <img
               src={logo}
-              alt="KSRAPL - Do. Win. Grow."
-              className="h-[3.6rem] w-auto"
+              alt="Nuvoautotech - Do. Win. Grow."
+              className="h-[6.6rem] w-auto"
             />
           </motion.div>
 
