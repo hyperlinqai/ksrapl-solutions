@@ -21,7 +21,7 @@ const promoters = [
     bio: "Dhruv focuses on building scalable, robust systems and tools that support long-term OEM partnerships.",
     highlights: [
       "Strong grounding in robust systems and tools",
-      "Committed to taking Nuvoautotech to the highest possible level",
+      "Committed to taking NUVO Auto Technologies Pvt Ltd to the highest possible level",
       "Aligns strategy, operations, and customer expectations",
     ],
   },

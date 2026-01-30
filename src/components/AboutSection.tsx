@@ -53,7 +53,7 @@ export const AboutSection = () => {
             <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={aboutImage}
-                alt="Nuvoautotech Manufacturing Facility"
+                alt="NUVO Auto Technologies Pvt Ltd Manufacturing Facility"
                 className="w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent" />
@@ -79,7 +79,7 @@ export const AboutSection = () => {
             className="space-y-8"
           >
             <div>
-              <h2 className="text-4xl md:text-5xl font-bold mb-4">About Nuvoautotech</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">About NUVO Auto Technologies Pvt Ltd</h2>
               <p className="text-xl text-muted-foreground">
                 Specialists in tubular assemblies and fabricated components for critical
                 industrial applications.

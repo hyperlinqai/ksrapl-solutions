@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Star, ShieldCheck } from "lucide-react";
+import { ArrowRight, Star, ShieldCheck, BadgeCheck } from "lucide-react";
 import logo from "../assets/nuvo-logo.png";
 
 export const WelcomeOverlay = () => {
@@ -35,7 +35,7 @@ export const WelcomeOverlay = () => {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.5 }}
                     // Semi-transparent backdrop
-                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4"
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black p-4"
                 >
                     <motion.div
                         initial={{ scale: 0.9, opacity: 0 }}
@@ -54,9 +54,9 @@ export const WelcomeOverlay = () => {
                             transition={{ delay: 0.2, duration: 0.6 }}
                             className="relative z-10"
                         >
-                            <img src={logo} alt="Nuvoautotech Logo" className="h-36 mx-auto mb-6" />
+                            <img src={logo} alt="NUVO Auto Technologies Pvt Ltd Logo" className="h-36 mx-auto mb-6" />
                             <h1 className="text-3xl md:text-4xl font-bold text-white mb-2">
-                                Welcome to Nuvoautotech
+                                Welcome to NUVO Auto Technologies Pvt Ltd
                             </h1>
                             <p className="text-lg text-white/80 mb-6">
                                 Precision Tubular & Fabrication Solutions
@@ -77,6 +77,10 @@ export const WelcomeOverlay = () => {
                                 <ShieldCheck className="w-4 h-4 text-primary" />
                                 <span className="font-medium text-sm text-white">Trusted OEM Supplier</span>
                             </div>
+                            <div className="flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10">
+                                <BadgeCheck className="w-4 h-4 text-primary" />
+                                <span className="font-medium text-sm text-white">ISO 9001:2015 Certified</span>
+                            </div>
                         </motion.div>
 
                         <motion.div
@@ -87,8 +91,9 @@ export const WelcomeOverlay = () => {
                         >
                             <Button
                                 size="lg"
+                                variant="outline"
                                 onClick={handleEnter}
-                                className="w-full sm:w-auto px-10 py-6 text-lg rounded-full shadow-xl hover:shadow-primary/20 transition-all hover:scale-105"
+                                className="w-full sm:w-auto px-10 py-6 text-lg rounded-full shadow-xl hover:shadow-primary/20 transition-all hover:scale-105 bg-transparent border-primary text-primary hover:bg-primary/10"
                             >
                                 Enter Website <ArrowRight className="ml-2 w-5 h-5" />
                             </Button>

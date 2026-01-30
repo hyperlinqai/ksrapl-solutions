@@ -59,27 +59,30 @@ export const Hero = () => {
       </AnimatePresence>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-6 h-full flex items-center pt-20">
+      <div className="relative z-10 container mx-auto px-6 h-full flex items-center pt-12">
         <div className="max-w-3xl">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5, duration: 0.8 }}
           >
-            <p className="text-primary font-semibold text-sm uppercase tracking-wider mb-4">
+            <p className="text-primary font-semibold text-xs md:text-sm uppercase tracking-wider mb-3">
               Precision Tubular & Fabrication Solutions
             </p>
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
+            <h1 className="text-4xl md:text-6xl font-bold mb-4 leading-tight">
               Manufacturing Partners for{" "}
               <span className="text-gradient">OEMs Worldwide</span>
             </h1>
-            <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-              Nuvoautotech delivers high-precision tubular assemblies, diesel and hydraulic tanks,
-              and fabricated components that power tractors, earthmovers, pumps, and industrial
-              applications.
-            </p>
+            <div className="text-base md:text-lg text-muted-foreground mb-6 leading-relaxed">
+              <p className="mb-2">
+                NUVO delivers, High-precision tubular assemblies for diesel tanks, hydraulic tanks and steering pumps.
+              </p>
+              <p>
+                Fabricated assemblies for tractors, earthmovers and various other industrial applications
+              </p>
+            </div>
 
-            <div className="flex flex-wrap gap-4 mb-8">
+            <div className="flex flex-wrap gap-4 mb-6">
               <Button
                 size="lg"
                 onClick={() => scrollToSection("#products")}
@@ -120,8 +123,8 @@ export const Hero = () => {
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 2, duration: 1 }}
-        className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer"
-        onClick={() => scrollToSection("#vision")}
+        className="absolute bottom-4 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 cursor-pointer z-20"
+        onClick={() => scrollToSection("#about")}
       >
         <p className="text-sm text-muted-foreground">Scroll to discover our capabilities</p>
         <motion.div
@@ -133,7 +136,7 @@ export const Hero = () => {
       </motion.div>
 
       {/* Slide Indicators */}
-      <div className="absolute bottom-8 right-8 flex gap-2">
+      <div className="absolute bottom-4 right-8 flex gap-2">
         {slides.map((_, index) => (
           <button
             key={index}

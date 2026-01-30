@@ -61,9 +61,9 @@ export const StatsSection = () => {
           className="text-center mb-12"
         >
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold mb-4">
-            Nuvoautotech in Numbers
+            NUVO Auto Technologies Pvt Ltd in Numbers
           </div>
-          <h2 className="text-4xl md:text-5xl font-bold mb-3 text-white">
+          <h2 className="text-3xl md:text-4xl font-bold mb-3 text-white">
             Impact that scales with trust
           </h2>
           <p className="text-white/70 max-w-3xl mx-auto">

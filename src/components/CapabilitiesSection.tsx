@@ -1,28 +1,24 @@
 import { motion } from "framer-motion";
-import { 
-  Activity, 
-  Settings, 
-  Cpu, 
-  Sliders, 
-  Hash, 
-  Flame, 
-  Target, 
-  Wand2, 
-  Layers 
+import {
+  Activity,
+  Settings,
+  Cpu,
+  Sliders,
+  Hash,
+  Flame,
+  Target,
+  Wand2,
+  Layers
 } from "lucide-react";
 import { Card, CardContent } from "@/components/ui/card";
 
 const capabilities = [
   {
     title: "CNC Tube Bending",
-    description: "High-accuracy tube bending for complex geometries and assemblies.",
+    description: "High-accuracy tube bending with 5 axis capability to achieve complex geometries",
     icon: Activity,
   },
-  {
-    title: "Traub Automats",
-    description: "High-speed production of precision turned components.",
-    icon: Settings,
-  },
+
   {
     title: "CNC & VMC Machines",
     description: "Multi-axis machining for critical parts with tight tolerances.",
@@ -35,27 +31,27 @@ const capabilities = [
   },
   {
     title: "Thread Rolling",
-    description: "Strong, consistent threads for demanding applications.",
+    description: "Consistent threading and serrations with both in-feed and through-feed capabilities.",
     icon: Hash,
   },
   {
-    title: "CO₂ & TIG Welding, Brazing",
+    title: "Metal Joining Processes (Co2, Tig and Brazing)",
     description: "Robust joining for tubular and fabricated assemblies.",
     icon: Flame,
   },
   {
-    title: "Drilling Operations",
-    description: "High-volume drilling setups for production efficiency.",
+    title: "Drilling & Tapping",
+    description: "High volume drilling and tapping setup for production efficiency",
     icon: Target,
   },
   {
-    title: "Polishing & Deburring",
-    description: "Enhanced aesthetics and safety through refined finishing.",
+    title: "Polishing and Finishing",
+    description: "Rotary and linear buffing capabilities to achieve high level of aesthetics needed for pre painting and coating process.",
     icon: Wand2,
   },
   {
-    title: "Support Machines",
-    description: "Complementary equipment to support continuous manufacturing.",
+    title: "Rod Bending Capabilities",
+    description: "3 Dimensional rod bending capabilities to deliver precise connecting rods and shift levers",
     icon: Layers,
   },
 ];
@@ -71,7 +67,7 @@ export const CapabilitiesSection = () => {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground">
             Manufacturing Capabilities
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">

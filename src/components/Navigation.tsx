@@ -57,7 +57,7 @@ export const Navigation = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 dark-section ${scrolled ? "shadow-lg" : ""
         }`}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="container mx-auto px-6 py-2">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <motion.div
@@ -69,8 +69,8 @@ export const Navigation = () => {
           >
             <img
               src={logo}
-              alt="Nuvoautotech - Do. Win. Grow."
-              className="h-[6.6rem] w-auto"
+              alt="NUVO Auto Technologies Pvt Ltd - Do. Win. Grow."
+              className="h-20 w-auto"
             />
           </motion.div>
 
@@ -83,7 +83,7 @@ export const Navigation = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * index }}
                 onClick={() => handleNavClick(item.target, item.type)}
-                className="text-sm font-medium text-white/80 hover:text-white transition-colors relative group"
+                className="text-base font-medium text-white/80 hover:text-white transition-colors relative group"
               >
                 {item.label}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300" />

@@ -8,7 +8,7 @@ const contactDetails = [
 ];
 
 const address = [
-  "Nuvoautotech Pvt. Ltd.",
+  "NUVO Auto Technologies Pvt Ltd",
   "Weikfield Industrial Area",
   "Off Pune-Nagar Road",
   "Sanaswadi- Po, Shirur-Tal, Pune",
@@ -28,7 +28,7 @@ const Contact = () => {
             className="space-y-6 mb-10"
           >
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
-              Contact Nuvoautotech
+              Contact NUVO Auto Technologies Pvt Ltd
             </div>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight text-foreground">
               Let’s discuss your manufacturing requirements
