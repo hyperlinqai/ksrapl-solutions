@@ -6,25 +6,22 @@ import { Button } from "@/components/ui/button";
 
 const products = [
   {
-    name: "Banjo Body",
-    category: "Hydraulic Solutions",
-    description: "Precision Banjo bodies for hydraulic and fuel applications.",
-    image: "/products-home/10.png",
-    homeImage: "/products-home/custom/abstract_machining.png",
+    name: "Fan Guard",
+    category: "Fabricated Components",
+    description: "Precision-welded fan guards ensuring safety and airflow efficiency for harvesters and heavy machinery.",
+    image: "/products/Safety/DSC_1648 copy.png",
   },
   {
-    name: "Connecting Rods",
-    category: "Tubular Assemblies",
-    description: "Durable connecting rods engineered for high-load environments.",
-    image: "/products-home/11.png",
-    homeImage: "/products-home/custom/abstract_steel.png",
+    name: "Control Housing",
+    category: "Fabricated Components",
+    description: "Robust control housings designed for heavy-duty applications and precise fitment.",
+    image: "/products/Safety/DSC_1457 copy.png",
   },
   {
-    name: "Hydraulic Assembly",
-    category: "Hydraulic Solutions",
-    description: "Complete hydraulic assemblies ready for OEM integration.",
-    image: "/products-home/12.png",
-    homeImage: "/products-home/custom/abstract_hydraulics.png",
+    name: "Brake Pedals",
+    category: "Fabricated Components",
+    description: "Durable brake pedal assemblies engineered for reliable vehicle control and ergonomics.",
+    image: "/products/Safety/DSC_1457 copy.png",
   },
   {
     name: "Machined Components",
@@ -45,12 +42,6 @@ const products = [
     image: "/products-home/15.png",
   },
   {
-    name: "Fender Assembly",
-    category: "Fabricated Components",
-    description: "Robust fender assemblies built to OEM specifications.",
-    image: "/products-home/16.png",
-  },
-  {
     name: "Tractor Tubes",
     category: "Tubular Assemblies",
     description: "High-strength tubes for tractors and heavy-duty vehicles.",
@@ -58,7 +49,7 @@ const products = [
   },
 ];
 
-const filters = ["All", "Tubular Assemblies", "Hydraulic Solutions", "Fabricated Components"];
+const filters = ["All", "Tubular Assemblies", "Fabricated Components"];
 
 interface ProductsSectionProps {
   limit?: number;

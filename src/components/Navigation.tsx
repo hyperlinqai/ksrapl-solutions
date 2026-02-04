@@ -3,6 +3,13 @@ import { useNavigate, useLocation } from "react-router-dom";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/nuvo-logo.png";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+import { ChevronDown } from "lucide-react";
 
 const navItems = [
   { label: "Home", target: "#home", type: "section" as const },
@@ -76,19 +83,71 @@ export const Navigation = () => {
 
           {/* Nav Items */}
           <div className="hidden lg:flex items-center gap-8">
-            {navItems.map((item, index) => (
-              <motion.button
-                key={item.label}
-                initial={{ opacity: 0, y: -20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ delay: 0.1 * index }}
-                onClick={() => handleNavClick(item.target, item.type)}
-                className="text-base font-medium text-white/80 hover:text-white transition-colors relative group"
-              >
-                {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300" />
-              </motion.button>
-            ))}
+            {navItems.map((item, index) => {
+              if (item.label === "Products") {
+                return (
+                  <DropdownMenu key={item.label}>
+                    <DropdownMenuTrigger asChild>
+                      <motion.button
+                        initial={{ opacity: 0, y: -20 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{ delay: 0.1 * index }}
+                        className="text-base font-medium text-white/80 hover:text-white transition-colors relative group flex items-center gap-1 focus:outline-none"
+                      >
+                        {item.label}
+                        <ChevronDown className="w-4 h-4 opacity-50 group-hover:opacity-100 transition-opacity" />
+                        <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300" />
+                      </motion.button>
+                    </DropdownMenuTrigger>
+                    <DropdownMenuContent className="w-56 bg-white/95 backdrop-blur-md border-border/40 p-2" align="start">
+                      {[
+                        "Banjo Body Assemblies",
+                        "Fabricated Assemblies",
+                        "Steering Columns with Brake & Clutch Components",
+                        "Safety Components",
+                        "Tubing"
+                      ].map((category) => (
+                        <DropdownMenuItem
+                          key={category}
+                          className="cursor-pointer text-sm font-medium text-muted-foreground focus:text-primary focus:bg-primary/10 rounded-md py-2"
+                          onClick={() => {
+                            const slug = category.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+                            navigate(`/products#${slug}`);
+                            setTimeout(() => {
+                              const el = document.getElementById(slug);
+                              if (el) {
+                                const offset = 100;
+                                const bodyRect = document.body.getBoundingClientRect().top;
+                                const elementRect = el.getBoundingClientRect().top;
+                                const elementPosition = elementRect - bodyRect;
+                                const offsetPosition = elementPosition - offset;
+                                window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+                              }
+                            }, 100);
+                          }}
+                        >
+                          {category}
+                        </DropdownMenuItem>
+                      ))}
+                    </DropdownMenuContent>
+                  </DropdownMenu>
+                );
+              }
+
+              return (
+                <motion.button
+                  key={item.label}
+                  initial={{ opacity: 0, y: -20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ delay: 0.1 * index }}
+                  onClick={() => handleNavClick(item.target, item.type)}
+                  className="text-base font-medium text-white/80 hover:text-white transition-colors relative group"
+                >
+                  {item.label}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary group-hover:w-full transition-all duration-300" />
+                </motion.button>
+              );
+            })}
           </div>
 
           {/* CTA Button */}

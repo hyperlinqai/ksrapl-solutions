@@ -10,22 +10,22 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const testimonials = [
   {
-    name: "John Doe",
-    role: "Operations Head, OEM Client",
+    name: "Rijawan Badeghar",
+    role: "Manager Vendor Development Tractor",
     quote: "NUVO Auto Technologies Pvt Ltd has helped our plants run more smoothly with consistent quality and on-time tubular assemblies.",
-    initials: "JD",
+    initials: "RB",
   },
   {
-    name: "John Doe",
-    role: "Supply Chain Manager",
+    name: "Adarsh Upadhye",
+    role: "Senior Manager Purchase",
     quote: "Their JIT delivery and direct-on-line readiness have significantly reduced our inventory and logistics pressure.",
-    initials: "JD",
+    initials: "AU",
   },
   {
-    name: "John Doe",
-    role: "Production Manager",
+    name: "Dawarkesh Davada",
+    role: "Senior Engineer Sourcing and Commercial",
     quote: "Reliable, responsive, and focused on continuous improvement—exactly what we expect from a long-term manufacturing partner.",
-    initials: "JD",
+    initials: "DD",
   },
 ];
 

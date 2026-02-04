@@ -43,6 +43,27 @@ export const VideoSection = () => {
                         ></iframe>
                     </div>
                 </motion.div>
+
+                <motion.div
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.6, delay: 0.2 }}
+                    className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16"
+                >
+                    <div className="text-center p-6 rounded-2xl bg-background border border-border shadow-sm hover:shadow-md transition-shadow">
+                        <h3 className="text-4xl font-bold text-primary mb-3">20+ Years</h3>
+                        <p className="text-muted-foreground font-medium">Automotive & Heavy Equipment Manufacturing</p>
+                    </div>
+                    <div className="text-center p-6 rounded-2xl bg-background border border-border shadow-sm hover:shadow-md transition-shadow">
+                        <h3 className="text-2xl font-bold text-primary mb-3">Trusted OEM Supplier</h3>
+                        <p className="text-muted-foreground font-medium">Tier-1 & Tier-2 Customers</p>
+                    </div>
+                    <div className="text-center p-6 rounded-2xl bg-background border border-border shadow-sm hover:shadow-md transition-shadow">
+                        <h3 className="text-2xl font-bold text-primary mb-3">JIT & DOL Ready</h3>
+                        <p className="text-muted-foreground font-medium">Line-side supply capability</p>
+                    </div>
+                </motion.div>
             </div>
         </section>
     );

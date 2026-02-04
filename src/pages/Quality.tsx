@@ -13,10 +13,10 @@ const pillars = [
 ];
 
 const qms = [
-  "Certified to ISO 9001:2015",
-  "Layered process audits",
-  "Traceability built into production",
-  "Packaging aligned to OEM needs"
+  "ISO 9001:2015 aligned quality system",
+  "Controlled welding procedures (MIG / TIG)",
+  "Fixture-based fabrication for repeatability",
+  "Traceability and documentation support"
 ];
 
 const Quality = () => {
@@ -84,7 +84,7 @@ const Quality = () => {
 
             {/* QMS Sidebar */}
             <div className="space-y-6">
-              <h2 className="text-3xl font-bold text-foreground">QMS Highlights</h2>
+              <h2 className="text-3xl font-bold text-foreground">Manufacturing & Quality Strength</h2>
               <div className="bg-card border border-border rounded-2xl p-6 md:p-8 space-y-6 h-full shadow-sm">
                 <ul className="space-y-4">
                   {qms.map((item, idx) => (
@@ -143,6 +143,23 @@ const Quality = () => {
                 Download Full PDF
               </Button>
             </div>
+          </div>
+        </section>
+
+        {/* Video Section */}
+        <section className="container mx-auto max-w-6xl mb-12">
+          <div className="rounded-3xl border border-border bg-black overflow-hidden shadow-2xl">
+            <div style={{ padding: '56.25% 0 0 0', position: 'relative' }}>
+              <iframe
+                src="https://player.vimeo.com/video/1161353662?title=0&byline=0&portrait=0&badge=0&autopause=0&player_id=0&app_id=58479&autoplay=1&muted=1"
+                frameBorder="0"
+                allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
+                style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
+                title="Nuvo Qulity 01"
+              ></iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
           </div>
         </section>
       </main>

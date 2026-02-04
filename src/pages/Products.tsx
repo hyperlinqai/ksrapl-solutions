@@ -54,14 +54,16 @@ const productGroups: ProductGroup[] = [
     ],
   },
   {
-    title: "Linkages & Pedals",
-    description: "High-strength linkages and pedal assemblies for precise motion control.",
+    title: "Steering Columns with Brake & Clutch Components",
+    description: "Precision steering columns, brake pedals, and clutch assemblies engineered for safety and performance.",
     images: [
-      "/products/Linakges/DSC_1396%20copy.png",
+      "/products/Shift%20Levers%20and%20Pedals/DSC_1396%20copy.png",
+      "/products/Shift%20Levers%20and%20Pedals/DSC_1404%20copy.png",
+      "/products/Shift%20Levers%20and%20Pedals/DSC_1476%20copy.png",
+      "/products/Shift%20Levers%20and%20Pedals/DSC_1541%20copy.png",
+      "/products/Shift%20Levers%20and%20Pedals/DSC_1595%20copy.png",
       "/products/Linakges/DSC_1400%20copy.png",
-      "/products/Linakges/DSC_1404%20copy.png",
       "/products/Linakges/DSC_1428%20copy.png",
-      "/products/Linakges/DSC_1476%20copy.png",
       "/products/Linakges/DSC_1489%20copy.png",
       "/products/Linakges/DSC_1515%20copy.png",
       "/products/Linakges/DSC_1521%20copy.png",
@@ -69,11 +71,6 @@ const productGroups: ProductGroup[] = [
       "/products/Linkages/DSC_1617%20copy.png",
       "/products/Linkages/DSC_1642%20copy.png",
       "/products/Linkages/DSC_1670%20copy.png",
-      "/products/Shift%20Levers%20and%20Pedals/DSC_1396%20copy.png",
-      "/products/Shift%20Levers%20and%20Pedals/DSC_1404%20copy.png",
-      "/products/Shift%20Levers%20and%20Pedals/DSC_1476%20copy.png",
-      "/products/Shift%20Levers%20and%20Pedals/DSC_1541%20copy.png",
-      "/products/Shift%20Levers%20and%20Pedals/DSC_1595%20copy.png",
     ],
   },
   {
@@ -133,7 +130,32 @@ const ProductCard = ({ group }: { group: ProductGroup }) => (
   </Card>
 );
 
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+
+// Helper function to generate IDs
+const getGroupId = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
+
 const Products = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace('#', '');
+      const element = document.getElementById(id);
+      if (element) {
+        setTimeout(() => {
+          const offset = 100;
+          const bodyRect = document.body.getBoundingClientRect().top;
+          const elementRect = element.getBoundingClientRect().top;
+          const elementPosition = elementRect - bodyRect;
+          const offsetPosition = elementPosition - offset;
+          window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
+        }, 100);
+      }
+    }
+  }, [location.hash]);
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -163,14 +185,16 @@ const Products = () => {
           </motion.div>
         </section>
 
-        <section className="container mx-auto max-w-6xl space-y-10">
+        <section className="container mx-auto max-w-6xl space-y-16">
           {productGroups.map((group, idx) => (
             <motion.div
               key={group.title}
+              id={getGroupId(group.title)}
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
+              viewport={{ once: true, margin: "-100px" }}
               transition={{ duration: 0.5, delay: idx * 0.05 }}
+              className="scroll-mt-32"
             >
               <ProductCard group={group} />
             </motion.div>
