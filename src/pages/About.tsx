@@ -15,42 +15,32 @@ const pillars = [
   },
   {
     title: "Supply Assurance",
-    desc: "Dual tooling, alternate suppliers, and safety-stock strategies for zero line-stops.",
+    desc: "Dual tooling, alternate suppliers, and Kanban strategies for zero line-stops.",
   },
 ];
 
 const quality = [
   "ISO-aligned QMS with layered audits and SPC at critical stations.",
-  "In-house CMM, spectro, and pressure testing for tubular and hydraulic assemblies.",
+  "In-house weld lab, millipore testing, leak testing facilities.",
   "JIT / direct-on-line readiness with dock-to-stock packaging standards.",
 ];
 
 const capacities = [
-  { label: "Presses & Benders", value: "40+" },
-  { label: "Welding Lines", value: "22" },
-  { label: "CNC & VMC Centers", value: "18" },
-  { label: "Annual Tubular Output", value: "3.4k+ containers" },
+  { label: "Tonnes Presses", value: "20 to 300+" },
+  { label: "Robotic Welding Capabilities", value: "22" },
+  { label: "5 Axis Bending Capabilities", value: "18 CNC & VMC Centers " },
+  { label: "CNC and VMC High Precision Machining", value: "3.4k+ containers" },
 ];
 
-const leadership = [
-  {
-    name: "Operations",
-    detail: "30+ years in precision fabrication with a focus on takt-time stability.",
-  },
-  {
-    name: "Quality",
-    detail: "Automotive-grade QMS leaders driving PPAP, FMEA, and mistake-proofing.",
-  },
-  {
-    name: "Supply Chain",
-    detail: "Global logistics experience across sea, air, and multimodal lanes.",
-  },
-];
+
 
 import { VisionSection } from "@/components/VisionSection";
 import { PromotersSection } from "@/components/PromotersSection";
 
+import { useNavigate } from "react-router-dom";
+
 const About = () => {
+  const navigate = useNavigate();
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -63,16 +53,16 @@ const About = () => {
                 About NUVO Auto Technologies Pvt Ltd
               </div>
               <h1 className="text-4xl md:text-5xl font-bold leading-tight text-foreground">
-                Precision tubular & fabrication partners for OEMs who cannot compromise on uptime.
+                Manufacturing Partners for OEMs with complete focus on Quality, Cost and on-time Delivery
               </h1>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                We build diesel and hydraulic tanks, tubular assemblies, and fabricated components with the discipline of an automotive-grade supplier—so your production lines stay predictable.
+                We make tubular assemblies and fabricated parts with highest possible automotive standards so that your production lines stay smooth.
               </p>
               <div className="flex flex-wrap gap-3">
-                <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
+                <span className="px-4 py-2 rounded-full bg-muted text-foreground text-sm font-semibold">
                   JIT & DOL ready
                 </span>
-                <span className="px-4 py-2 rounded-full bg-primary/10 text-primary text-sm font-semibold">
+                <span className="px-4 py-2 rounded-full bg-muted text-foreground text-sm font-semibold">
                   Export compliant
                 </span>
                 <span className="px-4 py-2 rounded-full bg-muted text-foreground text-sm font-semibold">
@@ -80,8 +70,8 @@ const About = () => {
                 </span>
               </div>
               <div className="flex gap-4 pt-2">
-                <Button onClick={() => (window.location.href = "/contact")}>Talk to manufacturing</Button>
-                <Button variant="outline" onClick={() => (window.location.href = "/")}>
+                <Button onClick={() => navigate("/contact")}>Talk to manufacturing</Button>
+                <Button variant="outline" onClick={() => navigate("/products")}>
                   View product families
                 </Button>
               </div>
@@ -149,28 +139,7 @@ const About = () => {
           </div>
         </section>
 
-        {/* Leadership highlights */}
-        <section className="px-6 py-12 bg-muted/40">
-          <div className="container mx-auto max-w-6xl">
-            <div className="mb-6">
-              <h2 className="text-3xl md:text-4xl font-bold text-foreground">Leadership that ships</h2>
-              <p className="text-muted-foreground leading-relaxed">
-                A veteran team that has lived through audits, line-stops, and successful PPAPs—focused on prevention, not reaction.
-              </p>
-            </div>
-            <div className="grid sm:grid-cols-3 gap-4">
-              {leadership.map((item) => (
-                <div
-                  key={item.name}
-                  className="rounded-2xl border border-border/70 bg-card p-5 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  <div className="text-lg font-semibold text-foreground mb-2">{item.name}</div>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{item.detail}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
 
         {/* Promoters */}
         <PromotersSection />
@@ -178,28 +147,7 @@ const About = () => {
         {/* Global Presence */}
         <GlobalPresenceSection />
 
-        {/* Call to action */}
-        <section className="px-6 py-12">
-          <div className="container mx-auto max-w-6xl rounded-3xl bg-primary text-primary-foreground p-10 md:p-12 shadow-lg">
-            <div className="grid md:grid-cols-[2fr_1fr] gap-6 items-center">
-              <div>
-                <h3 className="text-2xl md:text-3xl font-bold mb-3">Ready for a capability walkthrough?</h3>
-                <p className="text-primary-foreground/90">
-                  Share your part print, annual volumes, and target lead time. We’ll respond with a manufacturability POV and a clear launch plan.
-                </p>
-              </div>
-              <div className="flex md:justify-end">
-                <Button
-                  variant="secondary"
-                  className="text-primary font-semibold"
-                  onClick={() => (window.location.href = "/contact")}
-                >
-                  Start a project
-                </Button>
-              </div>
-            </div>
-          </div>
-        </section>
+
       </main>
       <FooterCTA />
     </div>

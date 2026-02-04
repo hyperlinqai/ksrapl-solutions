@@ -121,8 +121,8 @@ const Quality = () => {
               {[
                 { title: "Incoming", desc: "RM testing at accredited labs with retained records." },
                 { title: "Pre-Launch", desc: "Capability studies and gauge R&R validation." },
-                { title: "Production", desc: "Poka-Yoke, Control Plans, & FMEA linkage." },
-                { title: "Final Check", desc: "Inspection with receiving & profile gauges." }
+                { title: "Production", desc: "Poka-Yoke, control plans, & FMEA linkage." },
+                { title: "Final Check", desc: "Firewall stations with receiving & profile gauges." }
               ].map((step, idx) => (
                 <div key={idx} className="relative z-10 text-center group">
                   <div className="w-16 h-16 mx-auto rounded-full bg-primary/10 text-primary flex items-center justify-center font-bold text-2xl mb-4 group-hover:bg-primary group-hover:text-primary-foreground transition-colors duration-300">
@@ -163,7 +163,7 @@ const Quality = () => {
           </div>
         </section>
       </main>
-      <FooterCTA />
+      <FooterCTA showCTA={false} />
     </div>
   );
 };

@@ -3,11 +3,7 @@ import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { FooterCTA } from "@/components/FooterCTA";
 
-const openings = [
-  { title: "Production Engineer", type: "Full-time", location: "Pune (On-site)" },
-  { title: "Quality Engineer", type: "Full-time", location: "Pune (On-site)" },
-  { title: "Supply Chain Executive", type: "Full-time", location: "Pune (On-site)" },
-];
+
 
 const Careers = () => {
   return (
@@ -25,7 +21,7 @@ const Careers = () => {
               Careers
             </div>
             <h1 className="text-4xl md:text-5xl font-bold leading-tight text-foreground">
-              Build with a team that ships for OEMs worldwide
+              Build with the team that ships for OEMs across the country
             </h1>
             <p className="text-lg text-muted-foreground max-w-3xl">
               If you care about process discipline, quality, and delivery excellence, we’d love to hear from you.
@@ -33,27 +29,7 @@ const Careers = () => {
           </motion.div>
         </section>
 
-        <section className="container mx-auto max-w-6xl grid lg:grid-cols-[1.1fr_0.9fr] gap-8">
-          <div className="rounded-2xl border border-border bg-card p-6 md:p-8 shadow-sm space-y-5">
-            <h2 className="text-2xl md:text-3xl font-semibold text-foreground">Open roles</h2>
-            <div className="space-y-3">
-              {openings.map((role) => (
-                <div
-                  key={role.title}
-                  className="flex items-start justify-between gap-3 rounded-xl border border-border/70 bg-background/60 p-4"
-                >
-                  <div>
-                    <div className="text-lg font-semibold text-foreground">{role.title}</div>
-                    <div className="text-sm text-muted-foreground">{role.type} · {role.location}</div>
-                  </div>
-                  <Button variant="outline" size="sm" onClick={() => (window.location.href = "/contact")}>
-                    Apply
-                  </Button>
-                </div>
-              ))}
-            </div>
-          </div>
-
+        <section className="container mx-auto max-w-3xl">
           <div className="rounded-2xl border border-border bg-card p-6 md:p-8 shadow-sm space-y-5">
             <h2 className="text-2xl md:text-3xl font-semibold text-foreground">Share your resume</h2>
             <p className="text-sm text-muted-foreground">

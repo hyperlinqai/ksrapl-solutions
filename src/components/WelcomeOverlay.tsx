@@ -10,13 +10,14 @@ export const WelcomeOverlay = () => {
 
     useEffect(() => {
         // Check if user has already seen the welcome screen in this session
-        // Commented out to ensure it shows for the user now
-        // const hasSeenWelcome = sessionStorage.getItem("hasSeenWelcome");
-        // if (!hasSeenWelcome) {
-        //     setShow(true);
-        // Disable scrolling when overlay is active
-        document.body.style.overflow = "hidden";
-        // }
+        const hasSeenWelcome = sessionStorage.getItem("hasSeenWelcome");
+        if (!hasSeenWelcome) {
+            setShow(true);
+            // Disable scrolling when overlay is active
+            document.body.style.overflow = "hidden";
+        } else {
+            setShow(false);
+        }
     }, []);
 
     const handleEnter = () => {

@@ -101,11 +101,11 @@ export const Navigation = () => {
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="w-56 bg-white/95 backdrop-blur-md border-border/40 p-2" align="start">
                       {[
-                        "Banjo Body Assemblies",
+                        "Safety Components",
                         "Fabricated Assemblies",
                         "Steering Columns with Brake & Clutch Components",
-                        "Safety Components",
-                        "Tubing"
+                        "Tubing",
+                        "Banjo Body Assemblies"
                       ].map((category) => (
                         <DropdownMenuItem
                           key={category}

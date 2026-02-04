@@ -7,7 +7,7 @@ const promoters = [
     name: "Suresh Rao",
     role: "Director",
     image: "/team/Suresh Rao.jpeg",
-    bio: "With over 20 years of experience in manufacturing, Suresh brings deep expertise in quality management systems and best manufacturing practices.",
+    bio: "With over 25 years of experience in manufacturing, Suresh brings deep expertise in quality management systems and best manufacturing practices.",
     highlights: [
       "Inclusive, customer-focused leadership",
       "Experience across major industries and product development",

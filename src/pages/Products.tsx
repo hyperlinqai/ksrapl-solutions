@@ -12,14 +12,15 @@ type ProductGroup = {
 
 const productGroups: ProductGroup[] = [
   {
-    title: "Banjo Body Assemblies",
-    description: "Precision-machined banjo body assemblies for hydraulic and fuel systems.",
+    title: "Safety Components",
+    description: "Safety-critical brackets and guards built for durability and compliance.",
     images: [
-      "/products/Banjo%20Body%20Assemblies/22.png",
-      "/products/Banjo%20Body%20Assemblies/23.png",
-      "/products/Banjo%20Body%20Assemblies/24.png",
-      "/products/Banjo%20Body%20Assemblies/25.png",
-      "/products/Banjo%20Body%20Assemblies/26.png",
+      "/products/Safety/DSC_1455%20copy.png",
+      "/products/Safety/DSC_1457%20copy.png",
+      "/products/Safety/DSC_1471%20copy.png",
+      "/products/Safety/DSC_1648%20copy.png",
+      "/products/Safety/DSC_1653%20copy.png",
+      "/products/Safety/DSC_1689%20copy.png",
     ],
   },
   {
@@ -74,18 +75,6 @@ const productGroups: ProductGroup[] = [
     ],
   },
   {
-    title: "Safety Components",
-    description: "Safety-critical brackets and guards built for durability and compliance.",
-    images: [
-      "/products/Safety/DSC_1455%20copy.png",
-      "/products/Safety/DSC_1457%20copy.png",
-      "/products/Safety/DSC_1471%20copy.png",
-      "/products/Safety/DSC_1648%20copy.png",
-      "/products/Safety/DSC_1653%20copy.png",
-      "/products/Safety/DSC_1689%20copy.png",
-    ],
-  },
-  {
     title: "Tubing",
     description: "Precision-formed tubing for fluid transfer and structural applications.",
     images: [
@@ -94,6 +83,17 @@ const productGroups: ProductGroup[] = [
       "/products/Tubing/DSC_1559%20copy.png",
       "/products/Tubing/DSC_1575%20copy.png",
       "/products/Tubing/DSC_1611%20copy.png",
+    ],
+  },
+  {
+    title: "Banjo Body Assemblies",
+    description: "Precision-machined banjo body assemblies for hydraulic and fuel systems.",
+    images: [
+      "/products/Banjo%20Body%20Assemblies/22.png",
+      "/products/Banjo%20Body%20Assemblies/23.png",
+      "/products/Banjo%20Body%20Assemblies/24.png",
+      "/products/Banjo%20Body%20Assemblies/25.png",
+      "/products/Banjo%20Body%20Assemblies/26.png",
     ],
   },
 ];
@@ -131,13 +131,15 @@ const ProductCard = ({ group }: { group: ProductGroup }) => (
 );
 
 import { useLocation } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { RequestQuoteModal } from "@/components/RequestQuoteModal";
 
 // Helper function to generate IDs
 const getGroupId = (title: string) => title.toLowerCase().replace(/[^a-z0-9]+/g, '-');
 
 const Products = () => {
   const location = useLocation();
+  const [isQuoteModalOpen, setIsQuoteModalOpen] = useState(false);
 
   useEffect(() => {
     if (location.hash) {
@@ -177,7 +179,7 @@ const Products = () => {
               From banjo body assemblies to complex fabricated structures, our catalog covers critical tubular, linkage, safety, and structural needs with export-ready quality.
             </p>
             <div className="flex gap-3">
-              <Button onClick={() => (window.location.href = "/contact")}>Request a quote</Button>
+              <Button onClick={() => setIsQuoteModalOpen(true)}>Request a quote</Button>
               <Button variant="outline" onClick={() => (window.location.href = "/")}>
                 View home
               </Button>
@@ -202,6 +204,11 @@ const Products = () => {
         </section>
       </main>
       <FooterCTA />
+
+      <RequestQuoteModal
+        isOpen={isQuoteModalOpen}
+        onOpenChange={setIsQuoteModalOpen}
+      />
     </div>
   );
 };
