@@ -48,17 +48,17 @@ export const FooterCTA = () => {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <p>
                   <strong className="text-foreground block mb-1">Factory Address:</strong>
-                  Plot No. 273, Sector 24,<br />
-                  Faridabad - 121005,<br />
-                  Haryana, India
+                  Weikfield Industrial Area,<br />
+                  Off Pune-Nagar Road,<br />
+                  Sanaswadi- Po, Shirur-Tal, Pune 412208
                 </p>
                 <p>
                   <strong className="text-foreground block mb-1">Email:</strong>
-                  <a href="mailto:info@nuvoautotech.com" className="hover:text-primary transition-colors">info@nuvoautotech.com</a>
+                  <a href="mailto:admin@ksrapl.in" className="hover:text-primary transition-colors">admin@ksrapl.in</a> | <a href="mailto:ksrapl@gmail.com" className="hover:text-primary transition-colors">ksrapl@gmail.com</a>
                 </p>
                 <p>
                   <strong className="text-foreground block mb-1">Phone:</strong>
-                  <a href="tel:+919876543210" className="hover:text-primary transition-colors">+91 129 405 2273</a>
+                  <a href="tel:+919766552733" className="hover:text-primary transition-colors">+91-976-655-2733</a>
                 </p>
               </div>
             </div>

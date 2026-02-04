@@ -101,7 +101,7 @@ const Quality = () => {
                   <div className="bg-muted/50 rounded-xl p-4 text-center">
                     <div className="text-sm text-muted-foreground uppercase tracking-wider mb-1">Certification</div>
                     <div className="text-lg font-bold text-foreground mb-3">ISO 9001:2015</div>
-                    <Button variant="outline" size="sm" className="w-full" onClick={() => (window.location.href = "/KSR%20auto.pdf")}>
+                    <Button variant="outline" size="sm" className="w-full" onClick={() => (window.location.href = "/Nuvo_Certificate.pdf")}>
                       View Certificate
                     </Button>
                   </div>
@@ -136,10 +136,10 @@ const Quality = () => {
 
             <div className="mt-12 p-4 rounded-xl bg-muted/30 border border-border flex flex-col items-center justify-center text-center gap-4">
               <div className="flex flex-col gap-1">
-                <span className="font-semibold text-foreground">Certificate No: IND/QMS/NAB-C3206/3100</span>
-                <span className="text-sm text-muted-foreground">ISO 9001:2015 | Valid until 2024</span>
+                <span className="font-semibold text-foreground">Certificate No: IND/QMS/NAB-C3206/RC1/R1/3100</span>
+                <span className="text-sm text-muted-foreground">ISO 9001:2015 | Valid until 05.08.2027</span>
               </div>
-              <Button variant="link" className="text-primary" onClick={() => (window.location.href = "/KSR%20auto.pdf")}>
+              <Button variant="link" className="text-primary" onClick={() => (window.location.href = "/Nuvo_Certificate.pdf")}>
                 Download Full PDF
               </Button>
             </div>
@@ -156,7 +156,7 @@ const Quality = () => {
                 allow="autoplay; fullscreen; picture-in-picture; clipboard-write; encrypted-media; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
                 style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
-                title="Nuvo Qulity 01"
+                title="Nuvo Quality 01"
               ></iframe>
             </div>
             <script src="https://player.vimeo.com/api/player.js"></script>
