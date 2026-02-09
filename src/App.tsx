@@ -30,7 +30,7 @@ const App = () => (
       {/* <Sonner /> - Removed as per Code Edit */}
       <WelcomeOverlay />
       <BrowserRouter>
-        {/* <ScrollToTop /> - Removed as per Code Edit */}
+        <ScrollToTop />
         <AnimatePresence mode="wait"> {/* Added AnimatePresence */}
           <Routes>
             <Route path="/" element={<Index />} /> {/* Changed to Home in Code Edit, but keeping Index as per original file and assuming Home is a typo or not intended for this specific instruction */}
