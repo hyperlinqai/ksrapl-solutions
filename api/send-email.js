@@ -24,20 +24,35 @@ export default async function handler(req, res) {
     }
 
     try {
-        const { name, email, phone, message } = req.body;
+        const { type, name, email, phone, message, company, details } = req.body;
+
+        const isQuote = type === 'quote';
+        const subject = isQuote
+            ? `New Quote Request from ${name} at ${company}`
+            : `New Contact Form Submission from ${name}`;
+
+        const htmlContent = isQuote ? `
+            <h2>New Quote Request</h2>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Company:</strong> ${company}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone || 'Not provided'}</p>
+            <p><strong>Details/Requirements:</strong></p>
+            <p>${details}</p>
+        ` : `
+            <h2>New Contact Request</h2>
+            <p><strong>Name:</strong> ${name}</p>
+            <p><strong>Email:</strong> ${email}</p>
+            <p><strong>Phone:</strong> ${phone}</p>
+            <p><strong>Message:</strong></p>
+            <p>${message}</p>
+        `;
 
         const { data, error } = await resend.emails.send({
             from: 'onboarding@resend.dev',
             to: 'nuvoautotech01@gmail.com',
-            subject: `New Contact Form Submission from ${name}`,
-            html: `
-        <h2>New Contact Request</h2>
-        <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Phone:</strong> ${phone}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
-      `
+            subject: subject,
+            html: htmlContent
         });
 
         if (error) {

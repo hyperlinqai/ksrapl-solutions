@@ -16,6 +16,7 @@ const navItems = [
   { label: "About", target: "/about", type: "route" as const },
   { label: "Products", target: "/products", type: "route" as const },
   { label: "Quality", target: "/quality", type: "route" as const },
+  { label: "Annual Returns", target: "/annual-returns", type: "route" as const },
   { label: "Careers", target: "/careers", type: "route" as const },
   { label: "Contact", target: "/contact", type: "route" as const },
 ];
@@ -101,10 +102,11 @@ export const Navigation = () => {
                     </DropdownMenuTrigger>
                     <DropdownMenuContent className="w-56 bg-white/95 backdrop-blur-md border-border/40 p-2" align="start">
                       {[
-                        "Safety Components",
-                        "Fabricated Assemblies",
                         "Steering Columns with Brake & Clutch Components",
-                        "Tubing",
+                        "Fuel & Hydraulic Tanks",
+                        "Fabricated & Machined Components",
+                        "Linkages Assemblies",
+                        "Fanguard for Harvester",
                         "Banjo Body Assemblies"
                       ].map((category) => (
                         <DropdownMenuItem

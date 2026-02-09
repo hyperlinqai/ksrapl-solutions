@@ -35,9 +35,11 @@ export const FooterCTA = () => {
             <div className="space-y-4">
               <h4 className="font-semibold text-foreground">Products</h4>
               <nav className="flex flex-col gap-3">
-                <Link to="/products#safety-components" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Safety Components</Link>
-                <Link to="/products#fabricated-assemblies" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Fabricated Assemblies</Link>
-                <Link to="/products#tubing" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Precision Tubing</Link>
+                <Link to="/products#steering-columns-with-brake-clutch-components" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Steering Columns</Link>
+                <Link to="/products#fuel-hydraulic-tanks" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Fuel & Hydraulic Tanks</Link>
+                <Link to="/products#fabricated-machined-components" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Fabricated & Machined</Link>
+                <Link to="/products#linkages-assemblies" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Linkages Assemblies</Link>
+                <Link to="/products#fanguard-for-harvester" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Fanguard</Link>
                 <Link to="/products#banjo-body-assemblies" className="text-sm text-muted-foreground hover:text-primary transition-colors w-fit">Banjo Bodies</Link>
               </nav>
             </div>

@@ -6,22 +6,22 @@ import { Button } from "@/components/ui/button";
 
 const products = [
   {
-    name: "Fan Guard",
+    name: "Steering Columns with Brake & Clutch Components",
     category: "Fabricated Components",
-    description: "Precision-welded fan guards ensuring safety and airflow efficiency for harvesters and heavy machinery.",
-    image: "/products/Safety/DSC_1648 copy.png",
+    description: "Precision-engineered steering columns integrated with brake and clutch pedal assemblies for heavy machinery and agricultural vehicles.",
+    image: "/products/home-page-products/steering-columns.png",
   },
   {
-    name: "Control Housing",
+    name: "Fanguard for Harvester",
     category: "Fabricated Components",
-    description: "Robust control housings designed for heavy-duty applications and precise fitment.",
-    image: "/products/Safety/DSC_1457 copy.png",
+    description: "Precision-welded fan guards ensuring safety and airflow efficiency for harvesters and heavy agricultural machinery.",
+    image: "/products/home-page-products/fanguard-harvester.png",
   },
   {
-    name: "Brake Pedals",
+    name: "Fabricated & Machined Components",
     category: "Fabricated Components",
-    description: "Durable brake pedal assemblies engineered for reliable vehicle control and ergonomics.",
-    image: "/products/Safety/DSC_1457 copy.png",
+    description: "Custom fabricated and precision machined parts for diverse industrial and automotive applications.",
+    image: "/products/home-page-products/fabricated-machined.png",
   },
   {
     name: "Machined Components",

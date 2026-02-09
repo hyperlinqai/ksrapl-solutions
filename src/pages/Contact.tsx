@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { FooterCTA } from "@/components/FooterCTA";
+import { useNavigate } from "react-router-dom";
 
 const contactDetails = [
   { label: "Phone", value: "+91-976-655-2733" },
@@ -17,6 +18,8 @@ const address = [
 ];
 
 const Contact = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
@@ -87,8 +90,7 @@ const Contact = () => {
                   });
 
                   if (response.ok) {
-                    alert('Message sent successfully!');
-                    (e.target as HTMLFormElement).reset();
+                    navigate('/thank-you');
                   } else {
                     alert('Failed to send message. Please try again.');
                   }

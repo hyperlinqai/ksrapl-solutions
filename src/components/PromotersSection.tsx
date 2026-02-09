@@ -5,7 +5,7 @@ import { CheckCircle2 } from "lucide-react";
 const promoters = [
   {
     name: "Suresh Rao",
-    role: "Director",
+    role: "Technical Director",
     image: "/team/Suresh Rao.jpeg",
     bio: "With over 25 years of experience in manufacturing, Suresh brings deep expertise in quality management systems and best manufacturing practices.",
     highlights: [
