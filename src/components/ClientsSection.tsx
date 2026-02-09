@@ -1,17 +1,17 @@
 import { motion } from "framer-motion";
 
 const logos = [
-  { src: "/partner%20brands/1.Captain%20Tractor.png", alt: "Captain Tractor" },
-  { src: "/partner%20brands/2.Cooper%20Corp.png", alt: "Cooper Corp" },
-  { src: "/partner%20brands/3.Chromewell%20engineering.png", alt: "Chromewell Engineering" },
-  { src: "/partner%20brands/4.Kubota%20Logo.png", alt: "Kubota" },
-  { src: "/partner%20brands/5.ZF%20India.png", alt: "ZF India" },
-  { src: "/partner%20brands/6.Duroshox.png", alt: "Duroshox" },
-  { src: "/partner%20brands/7.active%20chromewell.png", alt: "Active Chromewell" },
-  { src: "/partner%20brands/8.ADM.png", alt: "ADM" },
-  { src: "/partner%20brands/9.JK.png", alt: "JK" },
-  { src: "/partner%20brands/10.Kinetic.png", alt: "Kinetic" },
-  { src: "/partner%20brands/11.SKH.png", alt: "SKH" },
+  { src: "/partner%20brands/1.Captain%20Tractor.webp", alt: "Captain Tractor" },
+  { src: "/partner%20brands/2.Cooper%20Corp.webp", alt: "Cooper Corp" },
+  { src: "/partner%20brands/3.Chromewell%20engineering.webp", alt: "Chromewell Engineering" },
+  { src: "/partner%20brands/4.Kubota%20Logo.webp", alt: "Kubota" },
+  { src: "/partner%20brands/5.ZF%20India.webp", alt: "ZF India" },
+  { src: "/partner%20brands/6.Duroshox.webp", alt: "Duroshox" },
+  { src: "/partner%20brands/7.active%20chromewell.webp", alt: "Active Chromewell" },
+  { src: "/partner%20brands/8.ADM.webp", alt: "ADM" },
+  { src: "/partner%20brands/9.JK.webp", alt: "JK" },
+  { src: "/partner%20brands/10.Kinetic.webp", alt: "Kinetic" },
+  { src: "/partner%20brands/11.SKH.webp", alt: "SKH" },
 ];
 
 export const ClientsSection = () => {

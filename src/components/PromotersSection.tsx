@@ -6,7 +6,7 @@ const promoters = [
   {
     name: "Suresh Rao",
     role: "Technical Director",
-    image: "/team/Suresh Rao.jpeg",
+    image: "/team/Suresh Rao.webp",
     bio: "With over 25 years of experience in manufacturing, Suresh brings deep expertise in quality management systems and best manufacturing practices.",
     highlights: [
       "Inclusive, customer-focused leadership",
@@ -17,7 +17,7 @@ const promoters = [
   {
     name: "Dhruv Aggarwal",
     role: "Director",
-    image: "/team/Dhruv aggarwal.jpeg",
+    image: "/team/Dhruv aggarwal.webp",
     bio: "Dhruv focuses on building scalable, robust systems and tools that support long-term OEM partnerships.",
     highlights: [
       "Strong grounding in robust systems and tools",

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/ui/card";
 import { Package, Award, Zap, Users, Leaf, HardHat, Factory, Car, CheckCircle2 } from "lucide-react";
-import aboutImage from "@/assets/about-manufacturing.jpg";
+import aboutImage from "@/assets/about-manufacturing.webp";
 
 const coreProducts = [
   "Fuel & Hydraulic Tanks",

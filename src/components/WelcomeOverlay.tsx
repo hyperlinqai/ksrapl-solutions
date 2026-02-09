@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, Star, ShieldCheck, BadgeCheck } from "lucide-react";
-import logo from "../assets/nuvo-logo.png";
+import logo from "../assets/nuvo-logo.webp";
 
 export const WelcomeOverlay = () => {
     // Default to true for development/verification so it always shows
