@@ -67,11 +67,11 @@ const productGroups: ProductGroup[] = [
     title: "Banjo Body Assemblies",
     description: "Precision-machined banjo body assemblies for hydraulic and fuel systems.",
     images: [
-      "/products/Banjo%20Body%20Assemblies/22.webp",
-      "/products/Banjo%20Body%20Assemblies/23.webp",
-      "/products/Banjo%20Body%20Assemblies/24.webp",
-      "/products/Banjo%20Body%20Assemblies/25.webp",
-      "/products/Banjo%20Body%20Assemblies/26.webp",
+      "/products/banjo-body-assemblies/22.webp",
+      "/products/banjo-body-assemblies/23.webp",
+      "/products/banjo-body-assemblies/24.webp",
+      "/products/banjo-body-assemblies/25.webp",
+      "/products/banjo-body-assemblies/26.webp",
     ],
   },
 ];
