@@ -4,15 +4,16 @@ import { FooterCTA } from "@/components/FooterCTA";
 
 const contactDetails = [
   { label: "Phone", value: "+91-976-655-2733" },
-  { label: "Email", value: "admin@ksrapl.in | ksrapl@gmail.com" },
+  { label: "Email", value: "dhruv@nuvoautotech.com" },
 ];
 
 const address = [
   "NUVO Auto Technologies Pvt Ltd",
-  "Weikfield Industrial Area",
-  "Off Pune-Nagar Road",
-  "Sanaswadi- Po, Shirur-Tal, Pune",
-  "412208",
+  "Gat No. 1258, Weikfield Ind. Area,",
+  "Off Pune-Nagar Road, Sanaswadi-PO, Shirur-Tal",
+  "Pune - 412208",
+  "MSME NO - MH-26-0185120",
+  "Maharashtra - 412208, India",
 ];
 
 const Contact = () => {
@@ -66,12 +67,43 @@ const Contact = () => {
               <p className="text-sm text-muted-foreground">
                 Share your requirements and we’ll respond with feasibility and next steps.
               </p>
-              <form className="space-y-4">
+              <form className="space-y-4" onSubmit={async (e) => {
+                e.preventDefault();
+                const formData = new FormData(e.currentTarget);
+                const data = {
+                  name: formData.get('name'),
+                  email: formData.get('email'),
+                  phone: formData.get('phone'),
+                  message: formData.get('message'),
+                };
+
+                try {
+                  const response = await fetch('/api/send-email', {
+                    method: 'POST',
+                    headers: {
+                      'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                  });
+
+                  if (response.ok) {
+                    alert('Message sent successfully!');
+                    (e.target as HTMLFormElement).reset();
+                  } else {
+                    alert('Failed to send message. Please try again.');
+                  }
+                } catch (error) {
+                  console.error('Error:', error);
+                  alert('An error occurred. Please try again later.');
+                }
+              }}>
                 <div className="grid md:grid-cols-2 gap-4">
                   <div className="flex flex-col gap-2">
                     <label className="text-sm text-muted-foreground">Name</label>
                     <input
+                      name="name"
                       type="text"
+                      required
                       placeholder="Your name"
                       className="w-full rounded-lg border border-border bg-background px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/60"
                     />
@@ -79,7 +111,9 @@ const Contact = () => {
                   <div className="flex flex-col gap-2">
                     <label className="text-sm text-muted-foreground">Email</label>
                     <input
+                      name="email"
                       type="email"
+                      required
                       placeholder="you@example.com"
                       className="w-full rounded-lg border border-border bg-background px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/60"
                     />
@@ -88,7 +122,9 @@ const Contact = () => {
                 <div className="flex flex-col gap-2">
                   <label className="text-sm text-muted-foreground">Phone</label>
                   <input
+                    name="phone"
                     type="tel"
+                    required
                     placeholder="+91-XXXX-XXX-XXX"
                     className="w-full rounded-lg border border-border bg-background px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/60"
                   />
@@ -96,13 +132,15 @@ const Contact = () => {
                 <div className="flex flex-col gap-2">
                   <label className="text-sm text-muted-foreground">Message</label>
                   <textarea
+                    name="message"
+                    required
                     rows={4}
                     placeholder="Tell us about your part, volumes, and timelines"
                     className="w-full rounded-lg border border-border bg-background px-3 py-2 text-foreground focus:outline-none focus:ring-2 focus:ring-primary/60 resize-none"
                   />
                 </div>
                 <button
-                  type="button"
+                  type="submit"
                   className="w-full rounded-lg bg-primary text-primary-foreground py-3 font-semibold hover:bg-primary/90 transition-colors"
                 >
                   Submit

@@ -48,13 +48,15 @@ export const FooterCTA = () => {
               <div className="space-y-3 text-sm text-muted-foreground">
                 <p>
                   <strong className="text-foreground block mb-1">Factory Address:</strong>
-                  Weikfield Industrial Area,<br />
-                  Off Pune-Nagar Road,<br />
-                  Sanaswadi- Po, Shirur-Tal, Pune 412208
+                  Gat No. 1258, Weikfield Ind. Area,<br />
+                  Off Pune-Nagar Road, Sanaswadi-PO, Shirur-Tal<br />
+                  Pune - 412208<br />
+                  MSME NO - MH-26-0185120<br />
+                  Maharashtra - 412208, India
                 </p>
                 <p>
                   <strong className="text-foreground block mb-1">Email:</strong>
-                  <a href="mailto:admin@ksrapl.in" className="hover:text-primary transition-colors">admin@ksrapl.in</a> | <a href="mailto:ksrapl@gmail.com" className="hover:text-primary transition-colors">ksrapl@gmail.com</a>
+                  <a href="mailto:dhruv@nuvoautotech.com" className="hover:text-primary transition-colors">dhruv@nuvoautotech.com</a>
                 </p>
                 <p>
                   <strong className="text-foreground block mb-1">Phone:</strong>

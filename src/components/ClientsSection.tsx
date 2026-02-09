@@ -1,15 +1,17 @@
 import { motion } from "framer-motion";
 
 const logos = [
-  { src: "/partner%20brands/1.png", alt: "Client 1" },
-  { src: "/partner%20brands/2.png", alt: "Client 2" },
-  { src: "/partner%20brands/3.png", alt: "Client 3" },
-  { src: "/partner%20brands/4.png", alt: "Client 4" },
-  { src: "/partner%20brands/5.png", alt: "Client 5" },
-  { src: "/partner%20brands/6.png", alt: "Client 6" },
-  { src: "/partner%20brands/7.png", alt: "Client 7" },
-  { src: "/partner%20brands/8.png", alt: "Client 8" },
-  { src: "/partner%20brands/9.png", alt: "Client 9" },
+  { src: "/partner%20brands/1.Captain%20Tractor.png", alt: "Captain Tractor" },
+  { src: "/partner%20brands/2.Cooper%20Corp.png", alt: "Cooper Corp" },
+  { src: "/partner%20brands/3.Chromewell%20engineering.png", alt: "Chromewell Engineering" },
+  { src: "/partner%20brands/4.Kubota%20Logo.png", alt: "Kubota" },
+  { src: "/partner%20brands/5.ZF%20India.png", alt: "ZF India" },
+  { src: "/partner%20brands/6.Duroshox.png", alt: "Duroshox" },
+  { src: "/partner%20brands/7.active%20chromewell.png", alt: "Active Chromewell" },
+  { src: "/partner%20brands/8.ADM.png", alt: "ADM" },
+  { src: "/partner%20brands/9.JK.png", alt: "JK" },
+  { src: "/partner%20brands/10.Kinetic.png", alt: "Kinetic" },
+  { src: "/partner%20brands/11.SKH.png", alt: "SKH" },
 ];
 
 export const ClientsSection = () => {
