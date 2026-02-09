@@ -3,8 +3,10 @@ import { motion } from "framer-motion";
 import { Navigation } from "@/components/Navigation";
 import { Button } from "@/components/ui/button";
 import { FooterCTA } from "@/components/FooterCTA";
+import { useNavigate } from "react-router-dom";
 
 const Careers = () => {
+  const navigate = useNavigate();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [fileError, setFileError] = useState("");
   const [formData, setFormData] = useState({
@@ -77,7 +79,6 @@ const Careers = () => {
 
       if (!response.ok) throw new Error('Failed to send application');
 
-      alert("Application submitted successfully! Good luck.");
       // Reset form
       setFormData({
         name: "",
@@ -87,6 +88,8 @@ const Careers = () => {
         message: "",
         file: null
       });
+
+      navigate("/thank-you");
 
     } catch (error) {
       console.error('Error submitting application:', error);
